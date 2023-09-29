@@ -1,0 +1,102 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: transparent; /* Default background color */
+  padding: 20px;
+  transition: background-color 0.3s ease; /* Smooth transition effect */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
+}
+
+.header.scrolling {
+  background-color: #333; /* Background color when scrolling down 100px */
+}
+
+nav {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  font-size: 24px;
+  color: white;
+  text-decoration: none;
+}
+
+.menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
+
+.menu li {
+  margin-right: 20px;
+  color: black;
+}
+
+.menu a {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.menu a:hover {
+  color: #ff6600; /* Hover color */
+}
+/* Scrolling container */
+/* Scrolling container */
+.scrolling-container {
+  width: 100%;
+  overflow: hidden;
+}
+
+/* Scrolling content */
+.scrolling-content {
+  display: flex;
+  animation: scrollAnimation 20s linear infinite;
+  white-space: nowrap; /* Prevent images from wrapping to the next line */
+}
+
+/* Individual image items */
+.col-4 {
+  flex: 0 0 33.33%;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+/* Image styling */
+.col-4 img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Keyframes for scrolling animation */
+@keyframes scrollAnimation {
+  0% {
+    transform: translateX(100%); /* Start off-screen to the right */
+  }
+  100% {
+    transform: translateX(-100%); /* Scroll to the left end */
+  }
+}
